@@ -1,231 +1,308 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Act for Climate | South Sudan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
-                    colors: { 
-                        brand: { 500: '#059669', 600: '#047857', 900: '#064e3b' },
-                        accent: '#fbbf24'
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act for Climate| South Sudan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: { 
+                        brand: { 500: '#059669', 600: '#047857', 900: '#064e3b' },
+                        accent: '#fbbf24'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 transition-all duration-500 py-4" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
-                    <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg rotate-3 hover:rotate-0 transition-transform">SS</div>
-                    <span class="font-bold text-xl tracking-tight text-gray-900">Act for<span class="text-brand-500 font-normal">Climate</span></span>
-                </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="nav-link font-medium hover:text-brand-500 transition-colors">Home</a>
-                    <a href="#reality" class="nav-link font-medium hover:text-brand-500 transition-colors">Reality</a>
-                    <a href="#objectives" class="nav-link font-medium hover:text-brand-500 transition-colors">Objectives</a>
-                    <a href="#tips" class="nav-link font-medium hover:text-brand-500 transition-colors">Daily Tips</a>
-                    <a href="#solutions" class="bg-brand-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-brand-600 hover:shadow-xl transition-all transform hover:-translate-y-0.5">Take Action</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <nav class="fixed w-full z-50 transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                    <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg rotate-3 hover:rotate-0 transition-transform">SS</div>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">Act for<span class="text-brand-500 font-normal">Climate</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#reality" class="nav-link">Reality</a>
+                    <a href="#objectives" class="nav-link">Objectives</a>
+                    <a href="#tips" class="nav-link">Daily Tips</a>
+                    <a href="#solutions" class="bg-brand-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-brand-600 hover:shadow-xl transition-all transform hover:-translate-y-0.5">Take Action</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="slider-container absolute inset-0">
-            <div class="slide active" style="background-image: url('flood.jpg');"></div>
-            <div class="slide" style="background-image: url('flooded village.jpg');"></div>
-            <div class="slide" style="background-image: url('grand mom.jpeg');"></div>
-        </div>
-        
-        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent z-10"></div>
+    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="slider-container absolute inset-0">
+            <div class="slide active" style="background-image: url('flood.jpg');"></div>
+            <div class="slide" style="background-image: url('flooded\ village.jpg');"></div>
+            <div class="slide" style="background-image: url('grand\ mom.jpeg');"></div>
+        </div>
+        
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent z-10"></div>
 
-        <div class="relative z-20 text-center px-4 max-w-5xl mx-auto">
-            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-6">
-                <span class="w-2 h-2 bg-brand-500 rounded-full animate-ping"></span>
-                <span class="text-white text-sm font-medium tracking-widest uppercase">SDG 13: Urgent Climate Action</span>
-            </div>
-            <h1 class="text-5xl md:text-8xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
-                Protecting Our <br><span class="text-brand-500">Green Future</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                South Sudan faces unprecedented environmental threats. Together, we can build a resilient nation.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="#reality" class="bg-white text-brand-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all flex items-center justify-center gap-2">
-                    Learn the Truth
-                </a>
-                <a href="#solutions" class="bg-brand-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-600 shadow-2xl transition-all flex items-center justify-center gap-2">
-                    Our Solutions
-                </a>
-            </div>
-        </div>
+        <div class="relative z-20 text-center px-4 max-w-5xl mx-auto animate-fade-in-up">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-6">
+                <span class="w-2 h-2 bg-brand-500 rounded-full animate-ping"></span>
+                <span class="text-white text-sm font-medium tracking-widest uppercase">SDG 13: Urgent Climate Action</span>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
+                Protecting Our <br><span class="text-brand-500">Green Future</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                South Sudan faces unprecedented environmental threats. Together, we can build a resilient nation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#reality" class="bg-white text-brand-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all flex items-center justify-center gap-2">
+                    Learn the Truth
+                </a>
+                <a href="#solutions" class="bg-brand-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-600 shadow-2xl transition-all flex items-center justify-center gap-2">
+                    Our Solutions
+                </a>
+            </div>
+        </div>
 
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-            <a href="#reality" class="text-white opacity-50 hover:opacity-100 transition-opacity">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-            </a>
-        </div>
-    </header>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <a href="#reality" class="text-white opacity-50 hover:opacity-100 transition-opacity">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </a>
+        </div>
+    </header>
 
-    <section id="reality" class="py-32 bg-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="reveal-on-scroll">
-                    <h2 class="text-brand-500 font-bold uppercase tracking-widest mb-4">Problem Statement</h2>
-                    <h3 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight">The Reality of Climate Change in South Sudan</h3>
-                    <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
-                        <p>Our nation is increasingly affected by devastating flooding, prolonged droughts, and rapid deforestation. These are not just weather changes—they are threats to our very existence.</p>
-                        <div class="bg-brand-50 border-l-4 border-brand-500 p-6 rounded-r-xl italic">
-                            "These changes damage agriculture, reduce food production, and threaten livelihoods, especially in our rural communities."
-                        </div>
-                        <p>The unpredictability of weather patterns has made traditional farming nearly impossible, leading to food insecurity for millions of our citizens.</p>
-                    </div>
-                </div>
-                <div class="relative reveal-on-scroll">
-                    <div class="rounded-3xl overflow-hidden shadow-2xl transform rotate-2">
-                        <img src="flooded village.jpg" alt="Impact" class="w-full h-auto">
-                    </div>
-                    <div class="absolute -bottom-8 -left-8 bg-brand-900 text-white p-8 rounded-2xl shadow-xl hidden md:block max-w-xs">
-                        <p class="text-3xl font-bold mb-2">80%</p>
-                        <p class="text-sm text-gray-300">Of South Sudanese rely on agriculture that is now threatened by climate shifts.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="reality" class="py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-on-scroll">
+                    <h2 class="text-brand-500 font-bold uppercase tracking-widest mb-4">Problem Statement</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight">The Reality of Climate Change in South Sudan</h3>
+                    <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+                        <p>
+                            Our nation is increasingly affected by devastating flooding, prolonged droughts, and rapid deforestation. These are not just weather changes—they are threats to our very existence.
+                        </p>
+                        <div class="bg-brand-50 border-l-4 border-brand-500 p-6 rounded-r-xl italic">
+                            "These changes damage agriculture, reduce food production, and threaten livelihoods, especially in our rural communities."
+                        </div>
+                        <p>
+                            The unpredictability of weather patterns has made traditional farming nearly impossible, leading to food insecurity for millions of our citizens.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative reveal-on-scroll">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl transform rotate-2">
+                        <img src="flooded village.jpg" alt="Impact" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-8 -left-8 bg-brand-900 text-white p-8 rounded-2xl shadow-xl hidden md:block max-w-xs">
+                        <p class="text-3xl font-bold mb-2">80%</p>
+                        <p class="text-sm text-gray-300">Of South Sudanese rely on agriculture that is now threatened by climate shifts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section id="objectives" class="py-32 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-20 reveal-on-scroll">
-                <h2 class="text-brand-500 font-bold uppercase tracking-widest mb-4">Our Mission</h2>
-                <h3 class="text-4xl font-extrabold text-gray-900">Strategic Objectives</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 reveal-on-scroll">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.438 13.612l1.285 3.68a1.565 1.565 0 002.518.551l7.764-7.764a1.565 1.565 0 00-2.212-2.212l-7.764 7.764a1.565 1.565 0 00-.551-2.518l-3.68-1.285a1.565 1.565 0 00-2.019 1.888z"></path></svg>
-                    </div>
-                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Raise Awareness</h4>
-                    <p class="text-gray-600">Educating the public about climate change and its severe local impacts to inspire action.</p>
-                </div>
-                </div>
-        </div>
-    </section>
+    <section id="objectives" class="py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal-on-scroll">
+                <h2 class="text-brand-500 font-bold uppercase tracking-widest mb-4">Our Mission</h2>
+                <h3 class="text-4xl font-extrabold text-gray-900">Strategic Objectives</h3>
+                <p class="mt-4 text-gray-600">Our roadmap to a sustainable and climate-resilient South Sudan.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="objective-card group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 reveal-on-scroll">
+                    <div class="icon-box bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.438 13.612l1.285 3.68a1.565 1.565 0 002.518.551l7.764-7.764a1.565 1.565 0 00-2.212-2.212l-7.764 7.764a1.565 1.565 0 00-.551-2.518l-3.68-1.285a1.565 1.565 0 00-2.019 1.888z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Raise Awareness</h4>
+                    <p class="text-gray-600 leading-relaxed">Educating the public about climate change and its severe local impacts to inspire mass action.</p>
+                </div>
 
-    <section id="tips" class="py-32 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-                <div class="reveal-on-scroll">
-                    <h2 class="text-brand-500 font-bold uppercase tracking-widest mb-4">Daily Habits</h2>
-                    <h3 class="text-4xl font-extrabold text-gray-900">Be Part of the Solution</h3>
-                </div>
-                <div class="flex gap-4">
-                    <button id="prevTip" class="w-14 h-14 rounded-full border-2 border-gray-100 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-all group">
-                        <svg class="w-6 h-6 transition-transform group-active:scale-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </button>
-                    <button id="nextTip" class="w-14 h-14 rounded-full border-2 border-gray-100 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-all group">
-                        <svg class="w-6 h-6 transition-transform group-active:scale-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </button>
-                </div>
-            </div>
+                <div class="objective-card group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 reveal-on-scroll">
+                    <div class="icon-box bg-green-50 text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Environmental Protection</h4>
+                    <p class="text-gray-600 leading-relaxed">Promoting strategies to safeguard our unique ecosystems and wildlife from degradation.</p>
+                </div>
 
-            <div class="relative px-2">
-                <div class="tip-slider-track flex gap-8">
-                    
-                    <div class="modal-card-container group min-w-[320px] md:min-w-[400px]">
-                        <div class="relative h-[500px] overflow-hidden rounded-[2.5rem] bg-gray-900 shadow-xl transition-all duration-500 group-hover:-translate-y-2">
-                            <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-1000 group-hover:scale-110" style="background-image: url('flood.jpg');"></div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/40 to-transparent"></div>
-                            <div class="absolute inset-0 p-10 flex flex-col justify-end">
-                                <h4 class="text-3xl font-bold text-white mb-4">Stop Waste Burning</h4>
-                                <p class="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Burning waste releases toxic chemicals. Practice proper sorting and community composting instead.</p>
-                                <div class="mt-6 h-1 bg-white/20 rounded-full overflow-hidden">
-                                    <div class="h-full bg-brand-500 w-0 group-hover:w-full transition-all duration-700"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="objective-card group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 reveal-on-scroll">
+                    <div class="icon-box bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.143-7.714L1 12l6.857-2.286L11 3z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Tree Planting</h4>
+                    <p class="text-gray-600 leading-relaxed">Aggressive afforestation and reforestation to restore our carbon sinks and natural canopy.</p>
+                </div>
 
-                    <div class="modal-card-container group min-w-[320px] md:min-w-[400px]">
-                        <div class="relative h-[500px] overflow-hidden rounded-[2.5rem] bg-gray-900 shadow-xl transition-all duration-500 group-hover:-translate-y-2">
-                            <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-1000 group-hover:scale-110" style="background-image: url('grand mom.jpeg');"></div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/40 to-transparent"></div>
-                            <div class="absolute inset-0 p-10 flex flex-col justify-end">
-                                <h4 class="text-3xl font-bold text-white mb-4">Conserve Water</h4>
-                                <p class="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Water is precious. Use simple rainwater harvesting techniques for your home and garden.</p>
-                                <div class="mt-6 h-1 bg-white/20 rounded-full overflow-hidden">
-                                    <div class="h-full bg-brand-500 w-0 group-hover:w-full transition-all duration-700"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="objective-card group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 reveal-on-scroll">
+                    <div class="icon-box bg-yellow-50 text-yellow-600 group-hover:bg-yellow-600 group-hover:text-white transition-colors duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Reduce Pollution</h4>
+                    <p class="text-gray-600 leading-relaxed">Halt waste burning and curb deforestation to clean our air and preserve the soil.</p>
+                </div>
 
-                    <div class="modal-card-container group min-w-[320px] md:min-w-[400px]">
-                        <div class="relative h-[500px] overflow-hidden rounded-[2.5rem] bg-gray-900 shadow-xl transition-all duration-500 group-hover:-translate-y-2">
-                            <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-1000 group-hover:scale-110" style="background-image: url('flooded village.jpg');"></div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/40 to-transparent"></div>
-                            <div class="absolute inset-0 p-10 flex flex-col justify-end">
-                                <h4 class="text-3xl font-bold text-white mb-4">Educate Others</h4>
-                                <p class="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">Awareness is the first step. Talk to your neighbors about protecting our land for the next generation.</p>
-                                <div class="mt-6 h-1 bg-white/20 rounded-full overflow-hidden">
-                                    <div class="h-full bg-brand-500 w-0 group-hover:w-full transition-all duration-700"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="objective-card group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 reveal-on-scroll">
+                    <div class="icon-box bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Sustainable Living</h4>
+                    <p class="text-gray-600 leading-relaxed">Teaching communities how to use resources efficiently to harmonize with nature.</p>
+                </div>
 
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="objective-card group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 reveal-on-scroll">
+                    <div class="icon-box bg-red-50 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Support Policies</h4>
+                    <p class="text-gray-600 leading-relaxed">Advocating for environmental laws that protect natural resources for the next generation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section id="solutions" class="py-32 bg-brand-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-500/20 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="lg:w-1/2 reveal-on-scroll">
-                    <h2 class="text-brand-500 font-bold uppercase tracking-widest mb-4">Fixing the Future</h2>
-                    <h3 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Strategic Solutions</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">☀️ <h4 class="font-bold mt-2">Solar Energy</h4></div>
-                        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">🌳 <h4 class="font-bold mt-2">Reforestation</h4></div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 reveal-on-scroll">
-                    <div class="bg-white/10 backdrop-blur-3xl border border-white/20 p-10 rounded-[3rem]">
-                        <h4 class="text-3xl font-bold mb-6">Join the Movement</h4>
-                        <form class="space-y-4">
-                            <input type="text" placeholder="Name" class="w-full bg-white/10 border border-white/20 rounded-xl px-6 py-4 focus:outline-none focus:border-brand-500">
-                            <input type="email" placeholder="Email" class="w-full bg-white/10 border border-white/20 rounded-xl px-6 py-4 focus:outline-none focus:border-brand-500">
-                            <button class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-4 rounded-xl transition-all">Support Now</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
-    <footer class="bg-gray-950 text-gray-400 py-20 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <span class="font-bold text-3xl text-white block mb-4">Climate Action <span class="text-brand-500">SS</span></span>
-            <p>&copy; 2026 Climate Action South Sudan. Fighting for a greener tomorrow.</p>
-        </div>
-    </footer>
+    <section id="solutions" class="py-32 bg-brand-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-500/20 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 reveal-on-scroll">
+                    <h2 class="text-brand-500 font-bold uppercase tracking-widest mb-4">Fixing the Future</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Long-Term Strategic Solutions</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors">
+                            <span class="text-3xl mb-4 block">☀️</span>
+                            <h4 class="text-xl font-bold mb-2">Solar Energy</h4>
+                            <p class="text-gray-400 text-sm">Harnessing the sun to power South Sudan without carbon emissions.</p>
+                        </div>
+                        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors">
+                            <span class="text-3xl mb-4 block">🌳</span>
+                            <h4 class="text-xl font-bold mb-2">Reforestation</h4>
+                            <p class="text-gray-400 text-sm">Large scale tree planting to restore our climate's natural balance.</p>
+                        </div>
+                        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors">
+                            <span class="text-3xl mb-4 block">📘</span>
+                            <h4 class="text-xl font-bold mb-2">Education</h4>
+                            <p class="text-gray-400 text-sm">Training the next generation in climate adaptation strategies.</p>
+                        </div>
+                        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors">
+                            <span class="text-3xl mb-4 block">🏛️</span>
+                            <h4 class="text-xl font-bold mb-2">Policy Law</h4>
+                            <p class="text-gray-400 text-sm">Implementing and enforcing strict environmental protection laws.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 reveal-on-scroll">
+                    <div class="relative bg-white/10 backdrop-blur-3xl border border-white/20 p-10 rounded-[3rem]">
+                        <h4 class="text-3xl font-bold mb-6">Join the Movement</h4>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Your Name" class="w-full bg-white/10 border border-white/20 rounded-xl px-6 py-4 focus:outline-none focus:border-brand-500 transition-colors">
+                            <input type="email" placeholder="Your Email" class="w-full bg-white/10 border border-white/20 rounded-xl px-6 py-4 focus:outline-none focus:border-brand-500 transition-colors">
+                            <button class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-4 rounded-xl transition-all shadow-xl">Support Climate Action</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <section id="tips" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 reveal-on-scroll">
+                <h2 class="text-brand-500 font-bold uppercase tracking-widest mb-4">Daily Tips</h2>
+                <h3 class="text-4xl font-extrabold text-gray-900">Be Part of the Solution</h3>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="modal-card-container group reveal-on-scroll">
+                    <div class="modal-card-inner relative h-96 overflow-hidden rounded-[2rem] bg-gray-900 shadow-xl transition-all duration-500 transform group-hover:-translate-y-4">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-700 group-hover:scale-110" style="background-image: url('flood.jpg');"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/60 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end transition-all duration-500 group-hover:pb-16">
+                            <h4 class="text-2xl font-bold text-white mb-2">Stop Waste Burning</h4>
+                            <div class="h-0 overflow-hidden transition-all duration-500 group-hover:h-24">
+                                <p class="text-gray-300">Burning waste releases toxic chemicals. Instead, practice proper sorting and community composting.</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-6 left-8 right-8 h-1 bg-white/20 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-500 w-0 group-hover:w-full transition-all duration-700"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-card-container group reveal-on-scroll">
+                    <div class="modal-card-inner relative h-96 overflow-hidden rounded-[2rem] bg-gray-900 shadow-xl transition-all duration-500 transform group-hover:-translate-y-4">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-700 group-hover:scale-110" style="background-image: url('grand mom.jpeg');"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/60 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end transition-all duration-500 group-hover:pb-16">
+                            <h4 class="text-2xl font-bold text-white mb-2">Conserve Water</h4>
+                            <div class="h-0 overflow-hidden transition-all duration-500 group-hover:h-24">
+                                <p class="text-gray-300">Water is precious during droughts. Use simple rainwater harvesting techniques for your garden.</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-6 left-8 right-8 h-1 bg-white/20 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-500 w-0 group-hover:w-full transition-all duration-700"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-card-container group reveal-on-scroll">
+                    <div class="modal-card-inner relative h-96 overflow-hidden rounded-[2rem] bg-gray-900 shadow-xl transition-all duration-500 transform group-hover:-translate-y-4">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-700 group-hover:scale-110" style="background-image: url('flooded village.jpg');"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/60 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end transition-all duration-500 group-hover:pb-16">
+                            <h4 class="text-2xl font-bold text-white mb-2">Educate Others</h4>
+                            <div class="h-0 overflow-hidden transition-all duration-500 group-hover:h-24">
+                                <p class="text-gray-300">Awareness is the first step. Talk to your family and neighbors about protecting our land.</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-6 left-8 right-8 h-1 bg-white/20 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-500 w-0 group-hover:w-full transition-all duration-700"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 text-gray-400 py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-2">
+                <span class="font-bold text-3xl text-white mb-6 block">Climate Action <span class="text-brand-500">SS</span></span>
+                <p class="text-lg max-w-sm">A collective effort to preserve South Sudan's heritage and environment through Sustainable Development Goal 13.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Navigation</h4>
+                <ul class="space-y-4">
+                    <li><a href="#reality" class="hover:text-brand-500 transition-colors">Reality</a></li>
+                    <li><a href="#objectives" class="hover:text-brand-500 transition-colors">Objectives</a></li>
+                    <li><a href="#tips" class="hover:text-brand-500 transition-colors">Daily Tips</a></li>
+                    <li><a href="#solutions" class="hover:text-brand-500 transition-colors">Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Contact</h4>
+                <p class="mb-4">Juba, South Sudan</p>
+                <a href="mailto:info@climateaction.ss" class="text-brand-500 text-xl font-bold hover:text-white transition-colors">info@climateaction.ss</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-8 border-t border-white/5 text-center text-sm">
+            &copy; 2026 Climate Action South Sudan. Fighting for a greener tomorrow.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
