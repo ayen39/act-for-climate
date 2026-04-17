@@ -1,95 +1,94 @@
 /* style.css */
-
-/* --- Smooth Scrolling & Body Resets --- */
-html {
-  scroll-behavior: smooth;
+:root {
+    --brand-500: #059669;
 }
 
-body {
-  margin: 0;
-  overflow-x: hidden; 
-  -webkit-font-smoothing: antialiased;
-}
-
-/* --- Custom Scrollbar --- */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f8fafc; 
-}
-
-::-webkit-scrollbar-thumb {
-  background: #059669; 
-  border-radius: 6px;
-  border: 3px solid #f8fafc; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #047857; 
-}
-
-/* --- Glassmorphism --- */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* --- Modal Design Technique for Cards --- */
-.modal-card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
-  position: relative;
-  top: 0;
+.nav-link {
+    @apply text-gray-600 hover:text-brand-500 font-medium transition-colors relative;
 }
 
-.modal-card:hover {
-  top: -10px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.4);
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--brand-500);
+    transition: width 0.3s ease;
 }
 
-/* --- Animations --- */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Slider Logic */
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, transform 10s linear;
+    transform: scale(1);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* Scroll Reveal */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Objective Cards */
+.icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal-Style Cards in Tips Section */
+.modal-card-container {
+    perspective: 1000px;
+}
+
+.modal-card-inner {
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 1s ease-out forwards;
+    animation: fade-in-up 1s forwards;
 }
-
-/* Blob Animation for Backgrounds */
-@keyframes blob {
-  0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0px, 0px) scale(1); }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-/* Scroll Reveal Classes (Handled by JS) */
-.reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
-}
-
-.reveal-on-scroll.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
