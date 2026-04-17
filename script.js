@@ -1,80 +1,60 @@
-// script.js
+/* script.js */
 
-// 1. Upgraded Join Alert (Custom Toast Notification)
-function joinAlert() {
-  // Prevent multiple toasts from stacking indefinitely
-  if (document.getElementById('custom-toast')) return;
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. Background Image Slider Logic ---
+    const slides = document.querySelectorAll('.slide-bg');
+    let currentSlide = 0;
+    const slideInterval = 5000; // 5 seconds per image
 
-  // Create toast element
-  const toast = document.createElement('div');
-  toast.id = 'custom-toast';
-  // Styling the toast with Tailwind classes for a modern look
-  toast.className = 'fixed bottom-6 right-6 bg-[#064e3b] text-white px-6 py-4 rounded-xl shadow-2xl transform transition-all duration-500 translate-y-20 opacity-0 z-50 flex items-center gap-4';
-  toast.innerHTML = `
-    <span class="text-3xl">🌍</span>
-    <div>
-      <h4 class="font-bold text-lg">Welcome to the Movement!</h4>
-      <p class="text-sm text-[#d1fae5]">Volunteer registration for South Sudan opens soon.</p>
-    </div>
-  `;
-  
-  document.body.appendChild(toast);
-  
-  // Trigger animation (Slide up and fade in)
-  requestAnimationFrame(() => {
-    toast.classList.remove('translate-y-20', 'opacity-0');
-  });
-  
-  // Remove toast automatically after 4.5 seconds
-  setTimeout(() => {
-    toast.classList.add('translate-y-20', 'opacity-0');
-    setTimeout(() => toast.remove(), 500); // Wait for transition to finish
-  }, 4500);
-}
+    function nextSlide() {
+        // Fade out current slide
+        slides[currentSlide].classList.remove('opacity-100');
+        slides[currentSlide].classList.add('opacity-0');
+        
+        // Move to next slide
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        // Fade in new slide
+        slides[currentSlide].classList.remove('opacity-0');
+        slides[currentSlide].classList.add('opacity-100');
+    }
 
-// 2. Localized Climate Tips tailored to South Sudan
-const tips = [
-  "Use solar-powered lanterns instead of charcoal to reduce emissions and indoor air pollution.",
-  "Plant indigenous trees like Mahogany or Neem around your homestead to prevent soil erosion.",
-  "Harvest rainwater during the wet season to use during dry spells for your crops.",
-  "Support briquettes made from agricultural waste instead of cutting down trees for firewood.",
-  "Dispose of plastics properly; don't throw them in the Nile where they cause blockages and worsen flooding."
-];
+    // Start the slider
+    if (slides.length > 0) {
+        setInterval(nextSlide, slideInterval);
+    }
 
-function showTip() {
-  const tipElement = document.getElementById("tipText");
-  const randomTip = tips[Math.floor(Math.random() * tips.length)];
-  
-  // Smooth fade-out, change text, fade-in effect
-  tipElement.style.transition = "opacity 0.3s ease-in-out";
-  tipElement.style.opacity = 0;
-  
-  setTimeout(() => {
-    tipElement.innerText = randomTip;
-    tipElement.style.opacity = 1;
-  }, 300);
-}
+    // --- 2. Scroll Reveal Animations ---
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
 
-// 3. Scroll Animations (Intersection Observer)
-// This makes cards and text fade and slide up when scrolling into view
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('opacity-100', 'translate-y-0');
-        entry.target.classList.remove('opacity-0', 'translate-y-10');
-        // Unobserve after animating so it only happens once
-        observer.unobserve(entry.target); 
-      }
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Optional: Stop observing once revealed
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.15, // Trigger when 15% of the element is visible
+        rootMargin: "0px"
     });
-  }, { threshold: 0.1 });
 
-  // Select all cards and section headings to apply the animation
-  const elementsToAnimate = document.querySelectorAll('.bg-white.p-8, section h2, section p:not(#tipText)');
-  
-  elementsToAnimate.forEach((el) => {
-    // Set initial state for animation
-    el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
-    observer.observe(el);
-  });
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // --- 3. Navbar Shadow on Scroll ---
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('shadow-md');
+            navbar.classList.replace('bg-white/85', 'bg-white/95'); // Slightly more opaque on scroll
+        } else {
+            navbar.classList.remove('shadow-md');
+            navbar.classList.replace('bg-white/95', 'bg-white/85');
+        }
+    });
 });
